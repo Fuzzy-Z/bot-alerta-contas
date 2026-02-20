@@ -9,9 +9,11 @@ client = Client(account_sid, auth_token)
 # LISTA DE NÚMEROS (Adicione quantos quiser seguindo o padrão)
 # Importante: O número deve ter +55, DDD e o número sem espaços
 numeros_destino = [
-    'whatsapp:+5511977625856',  # Seu número
-    'whatsapp:+5511888888888',  # Número da outra pessoa 1
-    'whatsapp:+5511777777777'   # Número da outra pessoa 2
+    'whatsapp:+5511977625856',  # Kayky
+    'whatsapp:+5511957624486',  # Mãe
+    'whatsapp:+5511981622972',  # Carol
+    'whatsapp:+5511977281609',  # Anna
+    'whatsapp:+5511962568459',  # Janaina
 ]
 
 def enviar_alerta():
