@@ -1,0 +1,32 @@
+name: Alerta de Contas Mensal
+
+on:
+  schedule:
+    # 12:00 UTC é 09:00 no horário de Brasília.
+    # O bot vai rodar sozinho todo dia 5.
+    - cron: '0 12 5 * *'
+  
+  # Permite que você clique em um botão para testar a qualquer momento
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v3
+
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Instalar Twilio
+        run: pip install twilio
+
+      - name: Executar Bot
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+        run: python bot.py
