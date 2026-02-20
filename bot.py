@@ -1,13 +1,10 @@
 import os
 from twilio.rest import Client
 
-# Configurações de autenticação (Pegas das Secrets do GitHub)
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
-# LISTA DE NÚMEROS (Adicione quantos quiser seguindo o padrão)
-# Importante: O número deve ter +55, DDD e o número sem espaços
 numeros_destino = [
     'whatsapp:+5511977625856',  # Kayky
     'whatsapp:+5511957624486',  # Mãe
@@ -17,7 +14,6 @@ numeros_destino = [
 ]
 
 def enviar_alerta():
-    # Design da mensagem com espaçamento e negritos
     mensagem_corpo = (
         "🔔 *LEMBRETE DE PAGAMENTO* 🔔\n"
         "📅 *Vencimento:* Dia 05\n\n"
