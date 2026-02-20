@@ -17,12 +17,18 @@ numeros_destino = [
 ]
 
 def enviar_alerta():
+    # Design da mensagem com espaçamento e negritos
     mensagem_corpo = (
-        "🚨 *LEMBRETE DE PAGAMENTO (DIA 5)*\n\n"
-        "Passando para avisar que as contas vencem hoje!\n"
-        "Favor perguntar partes para o Kayky💸"
-        "Para a Janaina, lembre-se de pagar suas contas!"
-        "Obrigado! 🙏"
+        "🔔 *LEMBRETE DE PAGAMENTO* 🔔\n"
+        "📅 *Vencimento:* Dia 05\n\n"
+        "-------------------------------------\n\n"
+        "Olá! Passando para avisar que as suas\n"
+        "contas vencem *hoje*! 💸\n\n"
+        "📌 *Orientações:*\n"
+        "• Favor perguntar as partes para o *Kayky* 💸\n"
+        "• *Janaina*, lembre-se de pagar suas contas!\n\n"
+        "-------------------------------------\n\n"
+        "Obrigado! 🙏✨"
     )
     
     for numero in numeros_destino:
